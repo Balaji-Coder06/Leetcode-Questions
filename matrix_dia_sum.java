@@ -1,0 +1,15 @@
+class matrix_dia_sum {
+    public int diagonalSum(int[][] mat) {
+        int sum=0;
+        for(int i=0;i<mat.length;i++){
+            for(int j=0;j<mat.length;j++){
+                if(i==j) sum+=mat[i][j];
+                if((i+j)==mat.length-1){
+                    if(i==j) continue;
+                    sum+=mat[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+}
